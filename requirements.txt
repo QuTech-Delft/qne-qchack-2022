@@ -1,0 +1,2 @@
+-e https://github.com/QuTech-Delft/qne-adk.git@aeac3c9d3db315a54f038e31a62403cffdb27160#egg=qne-adk
+squidasm==0.8.3
