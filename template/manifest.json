@@ -1,0 +1,10 @@
+{
+  "application": {
+    "name": "qkd",
+    "description": "add description",
+    "author": "add your name",
+    "email": "add@your.email",
+    "multi_round": false
+  },
+  "remote": {}
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Secret key length",
+    "description": "This input is available for multiple roles",
+    "values": [
+      {
+        "name": "key_length",
+        "default_value": 16,
+        "minimum_value": 16,
+        "maximum_value": 1024,
+        "unit": "",
+        "scale_value": 1.0
+      }
+    ],
+    "input_type": "number",
+    "roles": [
+      "alice",
+      "bob"
+    ]
+  }
+]
