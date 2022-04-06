@@ -129,7 +129,7 @@ will be rejected. The secret key must be a list consisting of integer 1's and
 dictionary. If an eavesdropper is detected, return `None` as the value of the
 `secret_key`.
 
-You can run `autocheck.py` from the root of the repository to verify your
+You can run `python autocheck.py` from the root of the repository to verify your
 application. However, note that the provided `autocheck.py` does not check if
 you correctly detect an eavesdropper. You are free to extend the `autocheck.py`
 to also test for an eavesdropper. The autograder used on submission will test
