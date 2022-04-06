@@ -81,6 +81,33 @@ of the art is in labs). Instead, it is recommended that you generate one
 entangled pair at a time and only generate the next one once the first one is
 measured (thus releasing the qubit).
 
+## Note on NetQASMConnection
+
+Your code will use a `NetQASMConnection` object to communicate with the
+simulator backend. In the provided application template the connection is
+already set up for you and opened using a context manager `with alice:`/`with
+bob:`. You must implement all your solution logic within that context and avoid
+opening new contexts. Opening multiple connections is not currently supported.
+
+## Note on debugging
+
+This is the first time the QNE-ADK is being used for a public hackathon and as
+such many features still need some time to mature. In particular, debugging
+applications can be challenging at times. Here are some tips to help you with
+debugging:
+- Make sure you run experiments with your applications very often to ensure your
+  code is runnable at all times and to make it easy to identify problematic
+  code. The provided template will run without any errors so it provides a good
+  starting point.
+- In case of any issues, please make sure you have read the notes and check if
+  any of them apply to your code.
+- If an error happens in the simulator backend, it will cause a 1-minute delay
+  before the experiment times out and reports the failure. If your application
+  seems to be running for longer than you expect, try cancelling it (e.g. with
+  Ctrl-C). However, note that the application itself may need a long time to
+  run, e.g. if you are generating many entangled pairs. When in doubt, just wait
+  a minute - if there was an error the experiment will time out and fail.
+
 ## Tasks
 
 The main goal of this challenge is to implement a QKD protocol that can generate
@@ -205,6 +232,11 @@ possible to generate a secure secret key. Therefore, do not set the channel
 fidelity to low. A value of `0.9` is reasonable for the purposes of this
 challenge.
 
+(Optional) You may, if you so wish, implement privacy amplification after you
+have implemented information reconciliation. However, please disable it in your
+submission as draws will be resolved based on which solution needed fewer
+entangled pairs for a given length of key.
+
 ## Submission
 
 Please ensure the following before submitting:
@@ -238,5 +270,9 @@ in which this can be done:
    authentication, but more convenient as no pre-shared key is required.
 
 Can you think of a better way with some better trade-off? If so, please include
-an `authenticaion.md` file with your submission outlining your solution. You
+an `authentication.md` file with your submission outlining your solution. You
 can, of course, always implement a demonstration with your QKD protocol as well.
+Submissions for this part of the challenge are not judged as part of the
+hackathon. However, if your solution is particularly novel and interesting
+QuTech may reach out to you for a more extensive discussion around your
+proposal.
