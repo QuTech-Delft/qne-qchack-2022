@@ -81,7 +81,7 @@ of the art is in labs). Instead, it is recommended that you generate one
 entangled pair at a time and only generate the next one once the first one is
 measured (thus releasing the qubit).
 
-## Note on NetQASMConnection
+### Note on NetQASMConnection
 
 Your code will use a `NetQASMConnection` object to communicate with the
 simulator backend. In the provided application template the connection is
@@ -89,7 +89,7 @@ already set up for you and opened using a context manager `with alice:`/`with
 bob:`. You must implement all your solution logic within that context and avoid
 opening new contexts. Opening multiple connections is not currently supported.
 
-## Note on debugging
+### Note on debugging
 
 This is the first time the QNE-ADK is being used for a public hackathon and as
 such many features still need some time to mature. In particular, debugging
