@@ -39,7 +39,7 @@ def run(test: TestCase) -> bool:
     test.configure()
 
     result = subprocess.run(
-        ["qne", "experiment", "run"],
+        ["qne", "experiment", "run", "--timeout", "60"],
         stdout=subprocess.DEVNULL,
     )
     if result.returncode != 0:
