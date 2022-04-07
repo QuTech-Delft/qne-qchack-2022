@@ -122,7 +122,7 @@ experiment --help`.
 Once you have an experiment created you can run it with
 
 ``` sh
-qne experiment run exp
+qne experiment run exp --timeout 30
 ```
 
 Where you replace `exp` with the experiment name you chose earlier, if it's

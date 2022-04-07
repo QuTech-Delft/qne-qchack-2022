@@ -101,12 +101,15 @@ debugging:
   starting point.
 - In case of any issues, please make sure you have read the notes and check if
   any of them apply to your code.
-- If an error happens in the simulator backend, it will cause a 1-minute delay
-  before the experiment times out and reports the failure. If your application
-  seems to be running for longer than you expect, try cancelling it (e.g. with
-  Ctrl-C). However, note that the application itself may need a long time to
-  run, e.g. if you are generating many entangled pairs. When in doubt, just wait
-  a minute - if there was an error the experiment will time out and fail.
+- If an error happens in the simulator backend, the CLI may have to wait until
+  the timeout expires (set with the `--timeout xx` option) before the experiment
+  reports the failure. If your experiment seems to be running for longer than
+  you expect, try cancelling it (e.g. with Ctrl-C) and then running it with a
+  shorter timeout. However, if the application terminates due to a timeout
+  without any additional error message then your application simply did not
+  finish within the timeout and was terminated prematurely. This may mean that
+  either the experiment itself may need a long time to run, e.g. if you are
+  generating many entangled pairs, or you have an infinite loop somewhere.
 
 ## Tasks
 
