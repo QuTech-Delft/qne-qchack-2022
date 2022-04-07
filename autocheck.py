@@ -35,11 +35,11 @@ class BasicProtocolsTestCase(TestCase):
         return TestCase.Result(success=True, message=None)
 
 
-def run(test: TestCase) -> bool:
+def run(test: TestCase, timeout: int = 60) -> bool:
     test.configure()
 
     result = subprocess.run(
-        ["qne", "experiment", "run", "--timeout", "60"],
+        ["qne", "experiment", "run", "--timeout", str(timeout)],
         stdout=subprocess.DEVNULL,
     )
     if result.returncode != 0:
