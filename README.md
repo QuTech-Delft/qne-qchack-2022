@@ -59,8 +59,11 @@ You can install both easily by running the following command from inside this
 repository after having cloned it (you will be prompted for your username and
 password that you chose earlier):
 
+Run the following commands:
+
 ```sh
-pip3 install --extra-index-url https://pypi.netsquid.org -r requirements.txt
+pip3 install -e git+https://github.com/QuTech-Delft/qne-adk.git@a125b2d27f1e5fef2822329cf824b18e22e9d00e#egg=qne-adk
+pip3 install squidasm==0.8.4 --extra-index-url https://pypi.netsquid.org
 ```
 
 You can verify the QNE ADK installation by running
@@ -138,9 +141,10 @@ Where you replace `exp` with the experiment name you chose earlier, if it's
 different from `exp`.
 
 You can view the results of the experiment in `exp/results/processed.json` or by
-running `qne experiment exp --show` (replacing `exp` with your experiment name
-if necessary). The results found at the top under `round_result` contain the
-contents of the dictionaries returns by `app_alice.py` and `app_bob.py`.
+running `qne experiment results exp --show` (replacing `exp` with your
+experiment name if necessary). The results found at the top under `round_result`
+contain the contents of the dictionaries returns by `app_alice.py` and
+`app_bob.py`.
 
 ## Iterating on your application
 
