@@ -38,6 +38,14 @@ class TestCase(ABC):
         with open(f"results/processed.json", "r") as f:
             results = json.load(f)
 
+        round_result = results[0]["round_result"]
+        if "error" in round_result:
+            error = round_result["error"]
+            exception = error["exception"]
+            message = error["message"]
+            self._print_result(TestCase.Result(success=False, message=f"{exception}: {message}"), 0)
+            return False
+
         app_results = results[0]["round_result"][0]
         alice_secret_key = app_results["app_alice"]["secret_key"]
         bob_secret_key = app_results["app_bob"]["secret_key"]
