@@ -22,12 +22,21 @@ Academy video](https://www.youtube.com/watch?v=lVXJgn3fDkg).
 
 ## Pre-requisites
 
+Firstly, you will need Python installed on your machine for this challenge.
+
+**CRITICAL: USE A PYTHON VERSION <= 3.9 --- DO NOT USE PYTHON 3.10**.
+
+The quantum network simulator, NetSquid, has not been updated for Python 3.10
+yet.
+
 Before continuing, it is recommended that you set up and work in a Python
 Virtual Environment. For more information, please see [this
-tutorial](https://docs.python.org/3/tutorial/venv.html). It is assumed from this
-point, that you are running in a Python virtual environment. The instructions
-should still work without a virtual environment, but they might be more
-difficult to debug in case something goes wrong.
+tutorial](https://docs.python.org/3/tutorial/venv.html). In addition to
+isolating your environment, it will also allow you to use an older Python
+version without having to uninstall Python 3.10 (if you have it). It is assumed
+from this point, that you are running in a Python virtual environment. The
+instructions should still work without a virtual environment, but they might be
+more difficult to debug in case something goes wrong.
 
 In order to make use of QuTech's discrete simulator for quantum networks,
 [NetSquid](https://netsquid.org/), you will need to first agree to the terms of
