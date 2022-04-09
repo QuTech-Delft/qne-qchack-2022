@@ -217,7 +217,7 @@ reconciliation and privacy
 amplification](https://en.wikipedia.org/wiki/Quantum_key_distribution#Information_reconciliation_and_privacy_amplification)
 phases to the QKD protocol. You can also find more information on this classical
 post-processing phase in [this
-paper](https://journals.aps.org/pra/pdf/10.1103/PhysRevA.81.012318?casa_token=lguqdZxMiRcAAAAA%3A1R-tQfLKXmFP6kJITUI2SGJcegVfqw7ai0JwAYKh2MreU5J1TG2FXMyPUj2ljr67HHnvquubSZrtzQ)
+paper](https://arxiv.org/abs/0910.0312)
 
 In this task you must replace your initial simple reconciliation phase (in which
 you most likely directly compared a select subset of bits of the raw key) with a
